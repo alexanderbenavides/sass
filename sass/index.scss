@@ -1,0 +1,95 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/breakpoints';
+@import 'partials/functions';
+
+* {
+    margin: 0;
+}
+
+// Loops and conditionals
+
+@for $i from 1 to 5 {
+    .li-#{$i} {
+        @if $i == 4 {
+            background-color: #4e0b0b;
+            padding: $padding-default;
+            width: fit-content;
+        }
+        @if $i % 2 == 0 {
+            color: red;
+        } @else {
+            color: green;
+        } 
+    }
+}
+
+$boxes-color: blue, orange, red, brown;
+@each $color in $boxes-color {
+    .box-#{$color} {
+        background: $color;
+    }
+}
+
+$fonts-list: (tiny: 8px, small: 12px, medium: 16px, large: 20px);
+@each $key, $value in $fonts-list {
+    .#{$key} {
+        font-size: $value;
+    }
+}
+
+header {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: $padding-default;
+    ul {
+        @include flex-between;
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
+main {
+    font-weight: weight(light);
+    font-size: em(18px);
+    padding: $padding-default;
+}
+
+footer {
+    background-color: $primary-color;
+    padding: $padding-default;
+    text-align: center;
+    color: $white-color;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.boxes {
+    @include flex-between;
+    padding: $padding-default;
+    flex-direction: column;
+    @include display-medium {
+        flex-direction: row;
+    }
+    .box {
+        @include box-size();
+    }
+}
+
+.error {
+    color: $danger-color;
+}
+
+.large {
+    font-size: em(24px);
+}
+
+.input-invalid {
+    @extend .error;
+    @extend .large;
+    border: 1px solid $danger-color;
+    font-weight: bolder;
+}
+
+@include italic-links;

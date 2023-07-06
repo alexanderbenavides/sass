@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+}
+
+.li-1 {
+  color: green;
+}
+
+.li-2 {
+  color: red;
+}
+
+.li-3 {
+  color: green;
+}
+
+.li-4 {
+  background-color: #4e0b0b;
+  padding: 16px;
+  width: fit-content;
+  color: red;
+}
+
+.box-blue {
+  background: blue;
+}
+
+.box-orange {
+  background: orange;
+}
+
+.box-red {
+  background: red;
+}
+
+.box-brown {
+  background: brown;
+}
+
+.tiny {
+  font-size: 8px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 16px;
+}
+
+.large, .input-invalid {
+  font-size: 20px;
+}
+
+header {
+  background-color: #00d0ff;
+  color: #fff;
+  padding: 16px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+}
+
+main {
+  font-weight: 300;
+  font-size: 1.125em;
+  padding: 16px;
+}
+
+footer {
+  background-color: #00d0ff;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .boxes {
+    flex-direction: row;
+  }
+}
+.boxes .box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ee6c6c;
+}
+
+.error, .input-invalid {
+  color: red;
+}
+
+.large, .input-invalid {
+  font-size: 1.5em;
+}
+
+.input-invalid {
+  border: 1px solid red;
+  font-weight: bolder;
+}
+
+a {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #ee6c6c;
+}
+
+/*# sourceMappingURL=index.css.map */

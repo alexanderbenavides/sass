@@ -1,0 +1,9 @@
+$font-weights: ('light': 300, 'normal': 400, 'bold': 700);
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@function em($pixels, $context: 16px) {
+    @return ($pixels / $context) * 1em;
+}
